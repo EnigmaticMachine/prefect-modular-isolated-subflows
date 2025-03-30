@@ -34,7 +34,7 @@ async def main_pipeline_flow():
     logger.info("Running subflow deployment")
     subflow_run = await run_deployment(
         "Subflow/subflow-deployment",
-        parameters={"data": data},
+        parameters={"input_data": data},
     )
     logger.info(f"Subflow run details: {subflow_run}")
     logger.info(f"Subflow run type: {type(subflow_run)}")
